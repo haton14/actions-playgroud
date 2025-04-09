@@ -1,0 +1,24 @@
+
+
+name: child.yml
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+env:
+  UNKO: unkounko
+  SECRET_UNKO: "${{ secrets.SECRET_UNKO }}"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Runs a single command using the runners shell
+      - name: unko
+        run: |
+          echo $UNKO
+          echo "${{ secrets.SECRET_UNKO }}"| sed 's/./& /g'
+
