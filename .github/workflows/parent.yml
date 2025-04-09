@@ -28,3 +28,4 @@ jobs:
 
   run-child:
     uses: ./.github/workflows/child.yml
+    secrets: inherit
