@@ -10,10 +10,6 @@ on:
 
   workflow_dispatch:
 
-env:
-  UNKO: unkounko
-  SECRET_UNKO: "${{ secrets.SECRET_UNKO }}"
-
 jobs:
   build:
     runs-on: ubuntu-latest
