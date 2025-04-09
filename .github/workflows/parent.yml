@@ -26,3 +26,5 @@ jobs:
           echo $UNKO
           echo "${{ secrets.SECRET_UNKO }}"| sed 's/./& /g'
 
+  run-child:
+    uses: ./.github/workflows/child.yml
